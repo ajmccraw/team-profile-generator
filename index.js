@@ -57,5 +57,17 @@ let promptQuestions = employeeData => {
               }
             }
         },
+        {
+            type: "input",
+            name: "github",
+            message: "Add Engineer's github username:",
+            when: function (data) {
+              if (data.employeeType === "Engineer") {
+                return true;
+              } else {
+                return false;
+              }
+            }
+        },
 
 }
