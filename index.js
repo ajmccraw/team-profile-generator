@@ -9,3 +9,16 @@ const generateHTML = require('');
 let managers = [];
 let engineers = [];
 let interns = [];
+
+let promptQuestions = employeeData => {
+
+    return inquirer.prompt ([
+        {
+            type: "list",
+            name: "employeeType",
+            message: "Which role would you like to add?",
+            choices: ['Manager', 'Engineer', 'Intern'],
+        },
+        
+
+}
