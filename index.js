@@ -94,6 +94,10 @@ let promptQuestions = employeeData => {
             let manager = new Manager (answerData.name, answerData.id, answerData.email, answerData.office);
             managers.push(manager);
         }
+        if (answerData.employeeType === "Engineer") {
+            let engineer = new Engineer (answerData.name, answerData.id, answerData.email, answerData.github);
+            engineers.push(engineer);
+        }
         
       });
 
