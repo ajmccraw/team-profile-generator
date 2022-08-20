@@ -19,6 +19,31 @@ let promptQuestions = employeeData => {
             message: "Which role would you like to add?",
             choices: ['Manager', 'Engineer', 'Intern'],
         },
-        
+        {
+            type: "input",
+            name: "name",
+            message: "Add employee name:",
+            validate: nameInput => {
+                if (nameInput) {
+                  return true;
+                } else {
+                  console.log('Add employee name:');
+                  return false;
+                }
+            }
+        },
+        {
+            type: "input",
+            name: "id",
+            message: "Add employee id:",
+            validate: nameInput => {
+                if (nameInput) {
+                  return true;
+                } else {
+                  console.log('Add employee id:');
+                  return false;
+                }
+            }
+        },
 
 }
