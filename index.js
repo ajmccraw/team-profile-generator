@@ -4,7 +4,7 @@ const Manager = require('./lib/manager');
 const Intern = require('./lib/intern');
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateHTML = require('');
+const generateHTML = require('./src/generateHTML');
 
 let managers = [];
 let engineers = [];
