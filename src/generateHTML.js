@@ -61,3 +61,25 @@ function generateManagerCards (managersArr) {
     `)}
     `
 };
+
+function generateEngineerCards (engineerArr) {
+    if (!engineerArr) { 
+        return '';
+    }
+    const engineerCardsArr = engineerArr.map(engineerData => {
+        return `
+    <div class="card bounce" style="width: 18rem;">
+        <img class="card-img-top" style="width: 5rem" src="./images/engineer.png" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">${engineerData.name}</h5>
+            <p class="card-text">ID: ${engineerData.id}</p>
+            <p class="card-text">Email: ${engineerData.email}</p>
+            <a href="https://github.com/${engineerData.github}" class="btn btn-primary">GitHub</a>
+        </div>
+    </div>`
+    });
+    return `
+    ${engineerCardsArr.join(`
+    `)}
+    `
+};
