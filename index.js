@@ -72,7 +72,7 @@ let promptQuestions = employeeData => {
         {
             type: "input",
             name: "school",
-            message: "Add Intern's school:",
+            message: "Add school of Intern:",
             when: function (data) {
               if (data.employeeType === "Intern") {
                 return true;
@@ -81,5 +81,12 @@ let promptQuestions = employeeData => {
               }
             }
         },
+        {
+            type: 'confirm',
+            name: 'confirmAnotherEmployee',
+            message: 'Would you like to add another employee?',
+            default: false
+        },
+    ])
 
 }
