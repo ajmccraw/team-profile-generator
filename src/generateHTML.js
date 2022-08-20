@@ -46,7 +46,7 @@ function generateManagerCards (managersArr) {
     }
     const managerCardsArr = managersArr.map(managerData => {
         return `
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 16rem;">
             <img class="card-img-top" style="width: 5rem" src="./images/manager.png" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">${managerData.name}</h5>
@@ -68,7 +68,7 @@ function generateEngineerCards (engineerArr) {
     }
     const engineerCardsArr = engineerArr.map(engineerData => {
         return `
-    <div class="card bounce" style="width: 18rem;">
+    <div class="card bounce" style="width: 16rem;">
         <img class="card-img-top" style="width: 5rem" src="./images/engineer.png" alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title">${engineerData.name}</h5>
@@ -83,3 +83,28 @@ function generateEngineerCards (engineerArr) {
     `)}
     `
 };
+
+function generateInternCards (internsArr) {
+    if (!internsArr) { 
+        return '';
+    }
+    const internCardsArr = internsArr.map(internData => {
+        return `
+    <div class="card bounce" style="width: 16rem;">
+        <img class="card-img-top" style="width: 5rem" src="./images/intern.png" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">${internData.name}</h5>
+            <p class="card-text">ID: ${internData.id}</p>
+            <p class="card-text">Email: ${internData.email}</p>
+            <p class="card-text">School: ${internData.school}</p>
+        </div>
+    </div>`
+    });
+    return `
+    ${internCardsArr.join(`
+    `)}
+    `
+};
+
+
+module.exports = generateHTML;
