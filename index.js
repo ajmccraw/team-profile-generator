@@ -98,7 +98,15 @@ let promptQuestions = employeeData => {
             let engineer = new Engineer (answerData.name, answerData.id, answerData.email, answerData.github);
             engineers.push(engineer);
         }
-        
+        if (answerData.employeeType === "Intern") {
+            let intern = new Intern (answerData.name, answerData.id, answerData.email, answerData.school);
+            interns.push(intern);
+        }
+        if (answerData.confirmAnotherEmployee) {
+          return promptQuestions(employeeData);
+        } else {
+          return employeeData;
+        }
       });
 
 }
