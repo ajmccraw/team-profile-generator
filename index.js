@@ -69,5 +69,17 @@ let promptQuestions = employeeData => {
               }
             }
         },
+        {
+            type: "input",
+            name: "school",
+            message: "Add Intern's school:",
+            when: function (data) {
+              if (data.employeeType === "Intern") {
+                return true;
+              } else {
+                return false;
+              }
+            }
+        },
 
 }
