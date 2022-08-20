@@ -39,3 +39,25 @@ function generateHTML (managers, engineers, interns) {
     </body>
     </html>`
 }
+
+function generateManagerCards (managersArr) {
+    if (!managerArr) { 
+        return '';
+    }
+    const managerCardsArr = managersArr.map(managerData => {
+        return `
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" style="width: 5rem" src="./images/manager.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">${managerData.name}</h5>
+              <p class="card-text">ID: ${managerData.id}</p>
+              <p class="card-text">Email: ${managerData.email}</p>
+              <p class="card-text">Office No: ${managerData.officeNumber}</p>
+            </div>
+        </div>`
+    });
+    return `
+    ${managerCardsArr.join(`
+    `)}
+    `
+};
