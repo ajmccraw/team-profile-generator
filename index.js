@@ -45,5 +45,17 @@ let promptQuestions = employeeData => {
                 }
             }
         },
+        {
+            type: "input",
+            name: "office",
+            message: "Add Manager's office number:",
+            when: function (data) {
+              if (data.employeeType === "Manager") {
+                return true;
+              } else {
+                return false;
+              }
+            }
+        },
 
 }
