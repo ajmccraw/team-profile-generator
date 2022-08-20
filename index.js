@@ -89,4 +89,12 @@ let promptQuestions = employeeData => {
         },
     ])
 
+    .then(answerData => {
+        if (answerData.employeeType === "Manager") {
+            let manager = new Manager (answerData.name, answerData.id, answerData.email, answerData.office);
+            managers.push(manager);
+        }
+        
+      });
+
 }
