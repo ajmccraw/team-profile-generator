@@ -130,4 +130,19 @@ const writeFile = fileContent => {
     });
   };
 
-  
+  function start() {
+    promptQuestions()
+    .then(data => {
+        return generateHTML(managers, engineers, interns);
+    })
+    // content will be used to then create a README
+    .then(pageHTML => {
+        return writeFile(pageHTML);
+    })
+    .catch(err => {
+        console.log(err);
+    });
+}
+
+
+start();
