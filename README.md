@@ -38,7 +38,7 @@ THEN I exit the application, and the HTML is generated
 
 ## Usage
 
-![team screenshot](team-screenshot.png)
+![team screenshot](./src/images/team-screenshot.png)
 
 ## License
 
